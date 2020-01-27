@@ -4,6 +4,7 @@ import { Book } from "./book.entity";
 import { Repository, InsertResult, UpdateResult } from "typeorm";
 import { InsertBookDto } from "./dto/insert-book.dto";
 import { Genre } from "../genre/genre.entity";
+import { Author } from "../author/author.entity";
 
 @Injectable()
 export class BookService {
@@ -38,12 +39,19 @@ export class BookService {
   }
 
   getBookFromDTO(bookData: InsertBookDto): Book {
+    const author = new Author();
+    for (const p of ["id", "firstName", "lastName"]) {
+      if (bookData.author[p]) {
+        author[p] = bookData.author[p];
+      }
+    }
+
     const b: Book = new Book();
     b.title = bookData.title;
-    b.author = bookData.author;
+    b.author = author;
     b.ageGroup = bookData.ageGroup;
     b.genre = [];
-    for (const g of bookData.genre) {
+    for (const g of (bookData.genre || [])) {
       const genre = new Genre();
       genre.type = g;
       b.genre.push(genre);

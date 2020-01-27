@@ -5,9 +5,11 @@ import {
   UpdateDateColumn,
   Entity,
   ManyToMany,
-  JoinTable
+  JoinTable,
+  ManyToOne
 } from "typeorm";
 import { Genre } from "../genre/genre.entity";
+import { Author } from "../author/author.entity";
 
 @Entity()
 export class Book {
@@ -17,10 +19,10 @@ export class Book {
   @Column({ length: 500 })
   title: string;
 
-  @Column({ length: 200 })
-  author: string;
+  @ManyToOne(type => Author, { cascade: ["insert", "update"] })
+  author: Author;
 
-  @ManyToMany(type => Genre, { cascade: true, eager: true })
+  @ManyToMany(type => Genre, { cascade: ["insert", "update"], eager: true })
   @JoinTable()
   genre: Genre[];
 

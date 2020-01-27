@@ -4,10 +4,10 @@ import { Repository } from "typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../user/user.entity";
 import { compare } from "bcrypt";
+import { log } from "../../logging";
 
 @Injectable()
 export class AuthService {
-
   currentUser: User;
 
   constructor(
@@ -42,11 +42,14 @@ export class AuthService {
   }
 
   async isAuthenticatedRequest(request) {
-    if (!request || !request.cookies || !request.cookies.sid) {
+    if (
+      !request ||
+      ((!request.cookies || !request.cookies.sid) && !request.body.__sid)
+    ) {
       return false;
     }
-    const sid = request.cookies.sid;
-    const user = await this.userRepo.findOne({ where: { id: sid } })
+    const sid = request.cookies.sid || request.body.__sid;
+    const user = await this.userRepo.findOne({ where: { id: sid } });
     if (user) {
       this.currentUser = user;
       return true;

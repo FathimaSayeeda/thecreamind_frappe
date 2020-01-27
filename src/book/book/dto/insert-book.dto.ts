@@ -1,11 +1,12 @@
-import { IsString, IsArray } from "class-validator";
+import { IsString, ValidateNested } from "class-validator";
+import { CreateAuthorDTO } from "src/book/author/dto/create-author.dto";
 
 export class InsertBookDto {
   @IsString()
   readonly title: string;
 
-  @IsString()
-  readonly author: string;
+  @ValidateNested()
+  readonly author: CreateAuthorDTO;
 
   @IsString({ each: true })
   readonly genre: string[];

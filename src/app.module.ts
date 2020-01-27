@@ -9,13 +9,14 @@ import { Genre } from "./book/genre/genre.entity";
 
 import { AuthModule } from "./auth/auth.module";
 import { User } from "./auth/user/user.entity";
+import { Author } from "./book/author/author.entity";
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: "sqlite",
       database: "test.sqlite",
-      entities: [Book, Genre, User],
+      entities: [Book, Genre, User, Author],
       synchronize: true
     }),
     BookModule,
