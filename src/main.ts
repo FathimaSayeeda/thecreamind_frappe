@@ -6,7 +6,9 @@ import { log } from "./logging";
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cookieParser());
-  app.enableCors();
+  app.enableCors({
+    origin: true
+  });
   const port = process.env.PORT || 3000;
   log(`Starting on Port ${port}`);
   await app.listen(process.env.PORT || 3000);
