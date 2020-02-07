@@ -5,7 +5,7 @@
       "connector": "bookshelf",
       "settings": {
         "client": "sqlite",
-        "filename": ".tmp/data.db"
+        "filename": "data.sqlite"
       },
       "options": {
         "useNullAsDefault": true
