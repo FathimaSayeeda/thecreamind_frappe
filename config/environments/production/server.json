@@ -3,7 +3,8 @@
   "port": "${process.env.PORT || 1337}",
   "production": true,
   "proxy": {
-    "enabled": false
+    "enabled": true,
+    "host": "api.thecreamind.com"
   },
   "cron": {
     "enabled": false
