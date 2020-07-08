@@ -1,17 +1,16 @@
 {
   "connection": "default",
-  "collectionName": "authors",
+  "collectionName": "age_groups",
   "info": {
-    "name": "Author"
+    "name": "Age Group"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "Name": {
-      "type": "string",
-      "required": true
+    "Title": {
+      "type": "string"
     }
   }
 }

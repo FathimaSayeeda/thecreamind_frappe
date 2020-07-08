@@ -31,6 +31,24 @@
     },
     "author": {
       "model": "author"
+    },
+    "age_groups": {
+      "collection": "age-group"
+    },
+    "categories": {
+      "collection": "category"
+    },
+    "publisher": {
+      "model": "publisher"
+    },
+    "RetailPrice": {
+      "type": "integer"
+    },
+    "book_series": {
+      "model": "book-series"
+    },
+    "BookSeriesIdx": {
+      "type": "integer"
     }
   }
 }
