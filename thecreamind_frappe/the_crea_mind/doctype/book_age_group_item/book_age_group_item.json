@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2021-04-11 11:11:47.983090",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "age_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Age Group",
+   "options": "Age Group",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-04-11 11:11:47.983090",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "Book Age Group Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

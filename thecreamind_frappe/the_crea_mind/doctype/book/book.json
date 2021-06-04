@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2021-04-11 10:56:51.754976",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "sub_title",
+  "description",
+  "categories",
+  "age_groups",
+  "column_break_3",
+  "title_image",
+  "author",
+  "publisher",
+  "retail_price",
+  "book_series",
+  "book_series_idx"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Link",
+   "label": "Author",
+   "options": "Author"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Link",
+   "label": "Publisher",
+   "options": "Publisher"
+  },
+  {
+   "fieldname": "retail_price",
+   "fieldtype": "Currency",
+   "label": "Retail Price"
+  },
+  {
+   "fieldname": "book_series",
+   "fieldtype": "Link",
+   "label": "Book Series",
+   "options": "Book Series"
+  },
+  {
+   "depends_on": "book_series",
+   "fieldname": "book_series_idx",
+   "fieldtype": "Int",
+   "label": "Book Series Idx"
+  },
+  {
+   "fieldname": "categories",
+   "fieldtype": "Table MultiSelect",
+   "label": "Categories",
+   "options": "Book Category Item"
+  },
+  {
+   "fieldname": "age_groups",
+   "fieldtype": "Table MultiSelect",
+   "label": "Age Groups",
+   "options": "Book Age Group Item"
+  },
+  {
+   "fieldname": "title_image",
+   "fieldtype": "Attach Image",
+   "label": "Title Image"
+  },
+  {
+   "fieldname": "sub_title",
+   "fieldtype": "Link",
+   "label": "Sub Title",
+   "options": "Book Subtitle"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-05-11 17:51:01.982400",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "Book",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guest"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

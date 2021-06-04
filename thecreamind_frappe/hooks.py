@@ -11,6 +11,15 @@ app_color = "grey"
 app_email = "faztp12@gmail.com"
 app_license = "MIT"
 
+fixtures = [
+  {
+    "dt": "Role",
+    "filters": [["name", "in", [
+      "The Crea Mind Manager"
+    ]]]
+  }
+]
+
 # Includes in <head>
 # ------------------
 

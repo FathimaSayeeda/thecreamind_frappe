@@ -1,0 +1,26 @@
+[
+ {
+  "bulk_actions": 1,
+  "chat": 1,
+  "dashboard": 1,
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "form_sidebar": 1,
+  "home_page": null,
+  "list_sidebar": 1,
+  "modified": "2021-04-11 09:34:59.183668",
+  "name": "The Crea Mind Manager",
+  "notifications": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "restrict_to_domain": null,
+  "role_name": "The Crea Mind Manager",
+  "search_bar": 1,
+  "timeline": 1,
+  "two_factor_auth": 0,
+  "view_switcher": 1
+ }
+]
