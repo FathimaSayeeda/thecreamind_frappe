@@ -20,7 +20,9 @@
   "publisher",
   "retail_price",
   "book_series",
-  "book_series_idx"
+  "book_series_idx",
+  "section_break_15",
+  "media"
  ],
  "fields": [
   {
@@ -103,11 +105,21 @@
    "fieldtype": "Data",
    "label": "ISBN",
    "search_index": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Table",
+   "label": "Media",
+   "options": "Entity Media"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-12 17:57:47.952178",
+ "modified": "2021-07-12 18:04:07.751913",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Book",
