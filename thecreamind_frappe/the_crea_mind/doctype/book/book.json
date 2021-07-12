@@ -13,6 +13,8 @@
   "categories",
   "age_groups",
   "column_break_3",
+  "isbn",
+  "is_featured",
   "title_image",
   "author",
   "publisher",
@@ -89,11 +91,23 @@
    "fieldtype": "Link",
    "label": "Sub Title",
    "options": "Book Subtitle"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_featured",
+   "fieldtype": "Check",
+   "label": "Is Featured"
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN",
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-11 17:51:01.982400",
+ "modified": "2021-07-12 17:57:47.952178",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Book",
