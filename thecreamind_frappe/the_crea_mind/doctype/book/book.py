@@ -6,11 +6,13 @@ from __future__ import unicode_literals
 # import frappe
 from frappe.model.document import Document
 from frappe.utils import cint
+from thecreamind_frappe.utils import slugify_text
 
 
 class Book(Document):
     def validate(self):
         self.validate_media()
+        self.validate_slug()
 
     def validate_media(self):
         if not len(self.get("media") or []):
@@ -25,3 +27,7 @@ class Book(Document):
 
         if len(sorted_media):
             sorted_media[0].default = 1
+
+    def validate_slug(self):
+        self.set('slug', slugify_text(self.doctype, 'slug', 'title',
+                                      self.title, self))

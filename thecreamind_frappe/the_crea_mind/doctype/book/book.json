@@ -22,7 +22,8 @@
   "book_series",
   "book_series_idx",
   "section_break_15",
-  "media"
+  "media",
+  "slug"
  ],
  "fields": [
   {
@@ -115,11 +116,18 @@
    "fieldtype": "Table",
    "label": "Media",
    "options": "Entity Media"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "Slug",
+   "read_only": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-12 18:04:07.751913",
+ "modified": "2021-07-19 21:09:48.021260",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Book",

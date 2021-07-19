@@ -5,6 +5,13 @@
 from __future__ import unicode_literals
 # import frappe
 from frappe.model.document import Document
+from thecreamind_frappe.utils import slugify_text
+
 
 class Author(Document):
-	pass
+    def validate(self):
+        self.validate_slug()
+
+    def validate_slug(self):
+        self.set('slug', slugify_text(self.doctype, 'slug', 'title',
+                                      self.title, self))

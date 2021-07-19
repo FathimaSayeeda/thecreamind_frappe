@@ -7,7 +7,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title"
+  "title",
+  "slug"
  ],
  "fields": [
   {
@@ -17,11 +18,18 @@
    "label": "Title",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "Slug",
+   "read_only": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-11 17:51:26.671397",
+ "modified": "2021-07-19 21:17:45.521992",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Age Group",

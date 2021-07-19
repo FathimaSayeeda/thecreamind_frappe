@@ -1,1 +1,2 @@
-frappe
+# frappe # installed via bench init
+awesome-slugify==1.6.5
