@@ -1,0 +1,45 @@
+type BookAgeGroupItem implements BaseDocType {
+  doctype: String
+  name: String
+  owner: User!
+  creation: String
+  modified: String
+  modified_by: User!
+  parent: BaseDocType
+  parentfield: String
+  parenttype: String
+  idx: Int
+  docstatus: Int
+  owner__name: String!
+  modified_by__name: String!
+  parent__name: String
+  age_group: AgeGroup!
+  age_group__name: String
+}
+
+enum BookAgeGroupItemSortField {
+  NAME
+  CREATION
+  MODIFIED
+}
+
+input BookAgeGroupItemSortingInput {
+  direction: SortDirection!
+  field: BookAgeGroupItemSortField!
+}
+
+type BookAgeGroupItemCountableEdge {
+  cursor: String!
+  node: BookAgeGroupItem!
+}
+
+type BookAgeGroupItemCountableConnection {
+  pageInfo: PageInfo!
+  totalCount: Int
+  edges: [BookAgeGroupItemCountableEdge!]!
+}
+
+extend type Query {
+  BookAgeGroupItem(name: String!): BookAgeGroupItem!
+  BookAgeGroupItems(filter: [DBFilterInput], sortBy: BookAgeGroupItemSortingInput, before: String, after: String, first: Int, last: Int): BookAgeGroupItemCountableConnection!
+}

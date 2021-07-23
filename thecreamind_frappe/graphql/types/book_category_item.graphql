@@ -1,0 +1,45 @@
+type BookCategoryItem implements BaseDocType {
+  doctype: String
+  name: String
+  owner: User!
+  creation: String
+  modified: String
+  modified_by: User!
+  parent: BaseDocType
+  parentfield: String
+  parenttype: String
+  idx: Int
+  docstatus: Int
+  owner__name: String!
+  modified_by__name: String!
+  parent__name: String
+  book_category: BookCategory!
+  book_category__name: String
+}
+
+enum BookCategoryItemSortField {
+  NAME
+  CREATION
+  MODIFIED
+}
+
+input BookCategoryItemSortingInput {
+  direction: SortDirection!
+  field: BookCategoryItemSortField!
+}
+
+type BookCategoryItemCountableEdge {
+  cursor: String!
+  node: BookCategoryItem!
+}
+
+type BookCategoryItemCountableConnection {
+  pageInfo: PageInfo!
+  totalCount: Int
+  edges: [BookCategoryItemCountableEdge!]!
+}
+
+extend type Query {
+  BookCategoryItem(name: String!): BookCategoryItem!
+  BookCategoryItems(filter: [DBFilterInput], sortBy: BookCategoryItemSortingInput, before: String, after: String, first: Int, last: Int): BookCategoryItemCountableConnection!
+}

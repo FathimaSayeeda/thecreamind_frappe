@@ -1,0 +1,45 @@
+type BookSubtitle implements BaseDocType {
+  doctype: String
+  name: String
+  owner: User!
+  creation: String
+  modified: String
+  modified_by: User!
+  parent: BaseDocType
+  parentfield: String
+  parenttype: String
+  idx: Int
+  docstatus: Int
+  owner__name: String!
+  modified_by__name: String!
+  parent__name: String
+  title: String!
+}
+
+enum BookSubtitleSortField {
+  NAME
+  CREATION
+  MODIFIED
+  TITLE
+}
+
+input BookSubtitleSortingInput {
+  direction: SortDirection!
+  field: BookSubtitleSortField!
+}
+
+type BookSubtitleCountableEdge {
+  cursor: String!
+  node: BookSubtitle!
+}
+
+type BookSubtitleCountableConnection {
+  pageInfo: PageInfo!
+  totalCount: Int
+  edges: [BookSubtitleCountableEdge!]!
+}
+
+extend type Query {
+  BookSubtitle(name: String!): BookSubtitle!
+  BookSubtitles(filter: [DBFilterInput], sortBy: BookSubtitleSortingInput, before: String, after: String, first: Int, last: Int): BookSubtitleCountableConnection!
+}

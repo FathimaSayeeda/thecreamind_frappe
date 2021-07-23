@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from . import __version__ as app_version
+from . import __version__ as app_version  # noqa
 
 app_name = "thecreamind_frappe"
 app_title = "Thecreamind Frappe"
@@ -12,12 +12,20 @@ app_email = "faztp12@gmail.com"
 app_license = "MIT"
 
 fixtures = [
-  {
-    "dt": "Role",
-    "filters": [["name", "in", [
-      "The Crea Mind Manager"
-    ]]]
-  }
+    {
+        "dt": "Role",
+        "filters": [["name", "in", [
+            "The Crea Mind Manager"
+        ]]]
+    }
+]
+
+graphql_sdl_dir = [
+    "thecreamind_frappe/thecreamind_frappe/graphql/types"
+]
+
+graphql_schema_processors = [
+    "thecreamind_frappe.graphql.queries.bind_queries"
 ]
 
 # Includes in <head>
@@ -55,7 +63,7 @@ fixtures = [
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+#    "Role": "home_page"
 # }
 
 # Generators
@@ -105,7 +113,7 @@ fixtures = [
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-#	}
+#   }
 # }
 
 # Scheduled Tasks
@@ -151,4 +159,3 @@ fixtures = [
 # exempt linked doctypes from being automatically cancelled
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
-

@@ -1,0 +1,47 @@
+type Publisher implements BaseDocType {
+  doctype: String
+  name: String
+  owner: User!
+  creation: String
+  modified: String
+  modified_by: User!
+  parent: BaseDocType
+  parentfield: String
+  parenttype: String
+  idx: Int
+  docstatus: Int
+  owner__name: String!
+  modified_by__name: String!
+  parent__name: String
+  title: String!
+  slug: String
+}
+
+enum PublisherSortField {
+  NAME
+  CREATION
+  MODIFIED
+  TITLE
+  SLUG
+}
+
+input PublisherSortingInput {
+  direction: SortDirection!
+  field: PublisherSortField!
+}
+
+type PublisherCountableEdge {
+  cursor: String!
+  node: Publisher!
+}
+
+type PublisherCountableConnection {
+  pageInfo: PageInfo!
+  totalCount: Int
+  edges: [PublisherCountableEdge!]!
+}
+
+extend type Query {
+  Publisher(name: String!): Publisher!
+  Publishers(filter: [DBFilterInput], sortBy: PublisherSortingInput, before: String, after: String, first: Int, last: Int): PublisherCountableConnection!
+}

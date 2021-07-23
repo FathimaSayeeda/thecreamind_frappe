@@ -1,0 +1,3 @@
+extend type Query {
+    getDocBySlug(doctype: String!, slug: String!): BaseDocType
+}

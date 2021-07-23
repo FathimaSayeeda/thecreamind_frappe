@@ -1,0 +1,65 @@
+type Book implements BaseDocType {
+  doctype: String
+  name: String
+  owner: User!
+  creation: String
+  modified: String
+  modified_by: User!
+  parent: BaseDocType
+  parentfield: String
+  parenttype: String
+  idx: Int
+  docstatus: Int
+  owner__name: String!
+  modified_by__name: String!
+  parent__name: String
+  title: String!
+  sub_title: BookSubtitle
+  sub_title__name: String
+  description: String
+  categories: [BookCategoryItem!]!
+  age_groups: [BookAgeGroupItem!]!
+  isbn: String
+  is_featured: Int
+  title_image: String
+  author: Author
+  author__name: String
+  publisher: Publisher
+  publisher__name: String
+  retail_price: Float
+  book_series: BookSeries
+  book_series__name: String
+  book_series_idx: Int
+  media: [EntityMedia!]!
+  slug: String
+}
+
+enum BookSortField {
+  NAME
+  CREATION
+  MODIFIED
+  TITLE
+  ISBN
+  SLUG
+}
+
+input BookSortingInput {
+  direction: SortDirection!
+  field: BookSortField!
+}
+
+type BookCountableEdge {
+  cursor: String!
+  node: Book!
+}
+
+type BookCountableConnection {
+  pageInfo: PageInfo!
+  totalCount: Int
+  edges: [BookCountableEdge!]!
+}
+
+extend type Query {
+  Book(name: String!): Book!
+  Books(filter: [DBFilterInput], sortBy: BookSortingInput, before: String, after: String, first: Int, last: Int): BookCountableConnection!
+}

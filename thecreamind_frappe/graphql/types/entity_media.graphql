@@ -1,0 +1,49 @@
+type EntityMedia implements BaseDocType {
+  doctype: String
+  name: String
+  owner: User!
+  creation: String
+  modified: String
+  modified_by: User!
+  parent: BaseDocType
+  parentfield: String
+  parenttype: String
+  idx: Int
+  docstatus: Int
+  owner__name: String!
+  modified_by__name: String!
+  parent__name: String
+  disabled: Int
+  default: Int
+  media_url: String
+  type: String
+  title: String
+  alt: String
+}
+
+enum EntityMediaSortField {
+  NAME
+  CREATION
+  MODIFIED
+}
+
+input EntityMediaSortingInput {
+  direction: SortDirection!
+  field: EntityMediaSortField!
+}
+
+type EntityMediaCountableEdge {
+  cursor: String!
+  node: EntityMedia!
+}
+
+type EntityMediaCountableConnection {
+  pageInfo: PageInfo!
+  totalCount: Int
+  edges: [EntityMediaCountableEdge!]!
+}
+
+extend type Query {
+  EntityMedia(name: String!): EntityMedia!
+  EntityMedias(filter: [DBFilterInput], sortBy: EntityMediaSortingInput, before: String, after: String, first: Int, last: Int): EntityMediaCountableConnection!
+}
