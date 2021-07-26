@@ -20,6 +20,12 @@ fixtures = [
     }
 ]
 
+doc_events = {
+    "File": {
+        "after_insert": "thecreamind_frappe.doc_events.file.optimize_image"
+    }
+}
+
 graphql_sdl_dir = [
     "thecreamind_frappe/thecreamind_frappe/graphql/types"
 ]
