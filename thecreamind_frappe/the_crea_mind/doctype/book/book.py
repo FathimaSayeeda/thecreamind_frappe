@@ -12,6 +12,7 @@ from thecreamind_frappe.utils import slugify_text
 class Book(Document):
     def validate(self):
         self.validate_media()
+        self.validate_title_image()
         self.validate_slug()
 
     def validate_media(self):
@@ -27,6 +28,13 @@ class Book(Document):
 
         if len(sorted_media):
             sorted_media[0].default = 1
+
+    def validate_title_image(self):
+        for m in self.get("media"):
+            if not m.default:
+                continue
+            self.title_image = m.media_url
+            break
 
     def validate_slug(self):
         self.set('slug', slugify_text(self.doctype, 'slug', 'title',
