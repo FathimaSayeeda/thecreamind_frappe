@@ -7,15 +7,6 @@ from thecreamind_frappe.utils.images import (
 
 
 def optimize_image(doc, method=None):
-    frappe.enqueue(
-        _optimize_image,
-        enqueue_after_commit=True,
-        file_doc=doc.name
-    )
-
-
-def _optimize_image(file_doc: str):
-    doc = frappe.get_doc("File", file_doc)
 
     file_url = doc.file_url
     if file_url.startswith("/private"):
@@ -34,14 +25,16 @@ def _optimize_image(file_doc: str):
         rel_path = os.path.relpath(img.file_path, frappe.get_site_path())
         file_url = "/" + rel_path if doc.is_private else rel_path.lstrip("public")
 
-        frappe.db.set_value(
-            "File", doc.name, frappe._dict(
-                file_name=img.file_name, file_url=file_url,
-                content_hash=img.content_hash, file_size=img.file_size,
-            ),
-            val=None, update_modified=False
-        )
+        for file in frappe.get_all("File", {"file_url": doc.file_url}):
+            frappe.db.set_value(
+                "File", file.name, frappe._dict(
+                    file_name=img.file_name, file_url=file_url,
+                    content_hash=img.content_hash, file_size=img.file_size,
+                ),
+                val=None, update_modified=True
+            )
 
+        doc.reload()
     except BaseException:
         frappe.log_error(
             title="Image Optimization Failed",
