@@ -19,15 +19,21 @@ class Book(Document):
         if not len(self.get("media") or []):
             return
 
-        if any(cint(x.get("default")) for x in self.get("media")):
-            return
+        if not any(cint(x.get("default")) for x in self.get("media")):
+            # Make sure atleast one is marked default
+            sorted_media = sorted(
+                [x for x in self.get("media") if not cint(x.get("disabled"))],
+                key=lambda a: 0 if a.get('type') == "Image" else 1)
 
-        sorted_media = sorted(
-            [x for x in self.get("media") if not cint(x.get("disabled"))],
-            key=lambda a: 0 if a.get('type') == "Image" else 1)
+            if len(sorted_media):
+                sorted_media[0].default = 1
 
-        if len(sorted_media):
-            sorted_media[0].default = 1
+        # Make sure only 1 is marked default
+        default_media = [x for x in self.get("media") if cint(x.get("default"))][0]
+        for media in self.get("media"):
+            if media == default_media:
+                continue
+            media.default = 0
 
     def validate_title_image(self):
         for m in self.get("media"):
