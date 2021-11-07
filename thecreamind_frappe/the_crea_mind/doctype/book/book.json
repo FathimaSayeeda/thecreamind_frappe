@@ -104,6 +104,7 @@
   {
    "fieldname": "isbn",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "ISBN",
    "search_index": 1
   },
@@ -127,7 +128,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-19 21:09:48.021260",
+ "modified": "2021-11-07 21:20:54.828291",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Book",
