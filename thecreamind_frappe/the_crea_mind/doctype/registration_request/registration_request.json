@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:REG-{#####}",
+ "creation": "2021-11-10 21:48:27.191895",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "date_of_birth",
+  "gender",
+  "hobbies",
+  "no_of_books_at_a_time",
+  "column_break_8",
+  "class",
+  "school_name",
+  "permanent_address",
+  "delivery_address_same_as_permanent_address",
+  "delivery_address",
+  "section_break_11",
+  "mother_full_name",
+  "mother_occupation",
+  "column_break_15",
+  "mother_mobile_no",
+  "mother_email_id",
+  "section_break_16",
+  "father_full_name",
+  "father_occupation",
+  "column_break_21",
+  "father_mobile_no",
+  "father_email_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale",
+   "read_only": 1
+  },
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "School Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "label": "Class",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hobbies",
+   "fieldtype": "Small Text",
+   "label": "Hobbies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Small Text",
+   "label": "Permanent Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_address",
+   "fieldtype": "Small Text",
+   "label": "Delivery Address",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_address_same_as_permanent_address",
+   "fieldtype": "Check",
+   "label": "Delivery Address Same as Permanent Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Maternal Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mother_full_name",
+   "fieldtype": "Data",
+   "label": "Mother Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mother_occupation",
+   "fieldtype": "Data",
+   "label": "Mother Occupation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mother_mobile_no",
+   "fieldtype": "Data",
+   "label": "Mother Mobile No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mother_email_id",
+   "fieldtype": "Data",
+   "label": "Mother Email ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Paternal Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "father_full_name",
+   "fieldtype": "Data",
+   "label": "Father Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "father_occupation",
+   "fieldtype": "Data",
+   "label": "Father Occupation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "father_mobile_no",
+   "fieldtype": "Data",
+   "label": "Father Mobile No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "father_email_id",
+   "fieldtype": "Data",
+   "label": "Father Email ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_books_at_a_time",
+   "fieldtype": "Int",
+   "label": "No of Books at a Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-11 00:08:48.448649",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "Registration Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Guest"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
