@@ -104,9 +104,18 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Membership Plans",
+   "link_to": "Membership Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2021-11-11 07:20:39.869348",
+ "modified": "2021-11-11 07:34:19.781470",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "TheCreaMind",
