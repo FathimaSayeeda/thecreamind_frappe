@@ -1,0 +1,167 @@
+{
+ "cards_label": "Elements",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-11-11 07:20:39.869348",
+ "developer_mode_only": 0,
+ "disable_user_customization": 1,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends": "Build",
+ "extends_another_page": 0,
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "tool",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "TheCreaMind",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Books",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book",
+   "link_to": "Book",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Authors",
+   "link_to": "Author",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Publishers",
+   "link_to": "Publisher",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Categories",
+   "link_to": "Book Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Series",
+   "link_to": "Book Series",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Age Group",
+   "link_to": "Age Group",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subtitle",
+   "link_to": "Book Subtitle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Registrations",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Registration Request",
+   "link_to": "Registration Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2021-11-11 07:20:39.869348",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "TheCreaMind",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "color": "Choose a color",
+   "doc_view": "List",
+   "label": "Book",
+   "link_to": "Book",
+   "type": "DocType"
+  },
+  {
+   "color": "Choose a color",
+   "doc_view": "List",
+   "label": "Book Category",
+   "link_to": "Book Category",
+   "type": "DocType"
+  },
+  {
+   "color": "Choose a color",
+   "doc_view": "List",
+   "label": "Book Series",
+   "link_to": "Book Series",
+   "type": "DocType"
+  },
+  {
+   "color": "Choose a color",
+   "doc_view": "List",
+   "label": "Author",
+   "link_to": "Author",
+   "type": "DocType"
+  },
+  {
+   "color": "Choose a color",
+   "doc_view": "List",
+   "label": "Publisher",
+   "link_to": "Publisher",
+   "type": "DocType"
+  },
+  {
+   "color": "Choose a color",
+   "doc_view": "List",
+   "label": "Age Group",
+   "link_to": "Age Group",
+   "type": "DocType"
+  },
+  {
+   "color": "Choose a color",
+   "doc_view": "List",
+   "label": "Book Subtitle",
+   "link_to": "Book Subtitle",
+   "type": "DocType"
+  }
+ ]
+}
