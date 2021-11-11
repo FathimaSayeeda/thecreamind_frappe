@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:M-{#####}",
+ "creation": "2021-11-11 07:49:24.839217",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "kid",
+  "membership_plan",
+  "has_library_access",
+  "has_activity_access",
+  "caution_deposit_collected",
+  "membership_amount",
+  "column_break_7",
+  "start_date",
+  "end_date",
+  "section_break_7",
+  "free_book_frequency",
+  "free_book_no",
+  "section_break_10",
+  "free_hour_frequency",
+  "free_hour_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "kid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kid",
+   "options": "Crea Mind Kid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Membership Plan",
+   "options": "Membership Plan",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "membership_plan.has_library_access",
+   "fieldname": "has_library_access",
+   "fieldtype": "Check",
+   "label": "Has Library Access",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "membership_plan.has_activity_access",
+   "fieldname": "has_activity_access",
+   "fieldtype": "Check",
+   "label": "Has Activity Access",
+   "read_only": 1
+  },
+  {
+   "fieldname": "caution_deposit_collected",
+   "fieldtype": "Currency",
+   "label": "Caution Deposit Collected"
+  },
+  {
+   "fetch_from": "membership_plan.amount",
+   "fieldname": "membership_amount",
+   "fieldtype": "Currency",
+   "label": "Membership Amount"
+  },
+  {
+   "depends_on": "has_library_access",
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Free Books"
+  },
+  {
+   "fetch_from": "membership_plan.free_book_frequency",
+   "fieldname": "free_book_frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "Weekly\nMonthly\nQuartery",
+   "read_only": 1
+  },
+  {
+   "default": "2",
+   "fetch_from": "membership_plan.free_book_no",
+   "fieldname": "free_book_no",
+   "fieldtype": "Int",
+   "label": "No of Books",
+   "read_only": 1
+  },
+  {
+   "depends_on": "has_activity_access",
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Free Activity Hours"
+  },
+  {
+   "fetch_from": "membership_plan.free_hour_frequency",
+   "fieldname": "free_hour_frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "Weekly\nMonthly\nQuarterly",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "membership_plan.free_hour_no",
+   "fieldname": "free_hour_no",
+   "fieldtype": "Int",
+   "label": "No of Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-11 08:14:01.096431",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "Kid Membership",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

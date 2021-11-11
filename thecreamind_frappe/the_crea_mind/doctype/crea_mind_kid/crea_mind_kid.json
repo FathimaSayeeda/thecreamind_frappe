@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "autoname": "format:KID-{#####}",
+ "creation": "2021-11-11 07:47:38.606832",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "date_of_birth",
+  "gender",
+  "hobbies",
+  "column_break_8",
+  "class",
+  "school_name",
+  "permanent_address",
+  "delivery_address_same_as_permanent_address",
+  "delivery_address",
+  "section_break_11",
+  "mother_full_name",
+  "mother_occupation",
+  "column_break_15",
+  "mother_mobile_no",
+  "mother_email_id",
+  "section_break_16",
+  "father_full_name",
+  "father_occupation",
+  "column_break_21",
+  "father_mobile_no",
+  "father_email_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "hobbies",
+   "fieldtype": "Small Text",
+   "label": "Hobbies"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "label": "Class"
+  },
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "School Name"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Small Text",
+   "label": "Permanent Address"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_address_same_as_permanent_address",
+   "fieldtype": "Check",
+   "label": "Delivery Address Same as Permanent Address"
+  },
+  {
+   "fieldname": "delivery_address",
+   "fieldtype": "Small Text",
+   "label": "Delivery Address"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Maternal Details"
+  },
+  {
+   "fieldname": "mother_full_name",
+   "fieldtype": "Data",
+   "label": "Mother Full Name"
+  },
+  {
+   "fieldname": "mother_occupation",
+   "fieldtype": "Data",
+   "label": "Mother Occupation"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mother_mobile_no",
+   "fieldtype": "Data",
+   "label": "Mother Mobile No"
+  },
+  {
+   "fieldname": "mother_email_id",
+   "fieldtype": "Data",
+   "label": "Mother Email ID"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Paternal Details"
+  },
+  {
+   "fieldname": "father_full_name",
+   "fieldtype": "Data",
+   "label": "Father Full Name"
+  },
+  {
+   "fieldname": "father_occupation",
+   "fieldtype": "Data",
+   "label": "Father Occupation"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "father_mobile_no",
+   "fieldtype": "Data",
+   "label": "Father Mobile No"
+  },
+  {
+   "fieldname": "father_email_id",
+   "fieldtype": "Data",
+   "label": "Father Email ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-11 08:07:44.363388",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "Crea Mind Kid",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -14,7 +14,10 @@
   "amount",
   "section_break_6",
   "free_book_frequency",
-  "free_book_no"
+  "free_book_no",
+  "section_break_9",
+  "free_hour_frequency",
+  "free_hour_no"
  ],
  "fields": [
   {
@@ -47,6 +50,7 @@
    "label": "Amount"
   },
   {
+   "depends_on": "has_library_access",
    "fieldname": "section_break_6",
    "fieldtype": "Section Break",
    "label": "Free Books"
@@ -55,18 +59,40 @@
    "fieldname": "free_book_frequency",
    "fieldtype": "Select",
    "label": "Frequency",
+   "mandatory_depends_on": "has_library_access",
    "options": "Weekly\nMonthly\nQuarterly"
   },
   {
    "default": "2",
+   "depends_on": "has_library_access",
    "fieldname": "free_book_no",
    "fieldtype": "Int",
    "label": "No of Books"
+  },
+  {
+   "depends_on": "has_activity_access",
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Free Hours"
+  },
+  {
+   "fieldname": "free_hour_frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "mandatory_depends_on": "has_activity_access",
+   "options": "Weekly\nMonthly\nQuarterly"
+  },
+  {
+   "default": "10",
+   "fieldname": "free_hour_no",
+   "fieldtype": "Int",
+   "label": "No of Hours",
+   "mandatory_depends_on": "has_activity_access"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-11 07:32:43.554640",
+ "modified": "2021-11-11 08:04:25.946133",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Membership Plan",
