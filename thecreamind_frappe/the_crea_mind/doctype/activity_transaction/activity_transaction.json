@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "autoname": "AT-{#####}",
+ "creation": "2021-11-11 08:52:57.320640",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "kid",
+  "kid_name",
+  "membership",
+  "column_break_3",
+  "date_time",
+  "amended_from",
+  "section_break_6",
+  "no_of_hours",
+  "rate",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "kid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kid",
+   "options": "Crea Mind Kid"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Activity Transaction",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "membership",
+   "fieldtype": "Link",
+   "label": "Membership",
+   "options": "Kid Membership"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "no_of_hours",
+   "fieldtype": "Int",
+   "label": "No of Hours",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "kid_name",
+   "fieldtype": "Data",
+   "label": "Kid Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-11-11 08:56:46.904652",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "Activity Transaction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

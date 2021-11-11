@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:BTR-{#####}",
+ "creation": "2021-11-11 08:24:12.008866",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "kid",
+  "membership",
+  "column_break_2",
+  "date_time",
+  "amended_from",
+  "section_break_6",
+  "books",
+  "section_break_8",
+  "amount",
+  "amount_received"
+ ],
+ "fields": [
+  {
+   "fieldname": "kid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kid",
+   "options": "Crea Mind Kid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership",
+   "fieldtype": "Link",
+   "label": "Membership",
+   "options": "Kid Membership"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date Time",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Library Transaction",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "books",
+   "fieldtype": "Table",
+   "label": "Books",
+   "options": "Library Transaction Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_received",
+   "fieldtype": "Currency",
+   "label": "Amount Received"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-11-11 08:59:23.529212",
+ "modified_by": "Administrator",
+ "module": "The Crea Mind",
+ "name": "Library Transaction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
