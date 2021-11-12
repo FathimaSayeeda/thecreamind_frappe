@@ -7,16 +7,24 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_1",
+  "book_issue_charge",
+  "column_break_3",
+  "book_damage_fine",
+  "book_lost_fine",
+  "section_break_2",
   "hourly_rate",
+  "column_break_8",
+  "damage_fine",
   "section_break_3",
   "library_caution_deposit",
+  "column_break_10",
   "activity_caution_deposit"
  ],
  "fields": [
   {
    "fieldname": "section_break_1",
    "fieldtype": "Section Break",
-   "label": "Activities"
+   "label": "Library"
   },
   {
    "default": "50",
@@ -26,25 +34,63 @@
   },
   {
    "fieldname": "section_break_3",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Caution Deposits"
   },
   {
    "default": "1000",
    "fieldname": "library_caution_deposit",
    "fieldtype": "Currency",
-   "label": "Library Caution Deposit"
+   "label": "Library"
   },
   {
    "default": "700",
    "fieldname": "activity_caution_deposit",
    "fieldtype": "Currency",
-   "label": "Activity Caution Deposit"
+   "label": "Activity"
+  },
+  {
+   "fieldname": "book_issue_charge",
+   "fieldtype": "Currency",
+   "label": "Book Issue Charge"
+  },
+  {
+   "fieldname": "book_damage_fine",
+   "fieldtype": "Currency",
+   "label": "Book Damage Fine"
+  },
+  {
+   "fieldname": "book_lost_fine",
+   "fieldtype": "Currency",
+   "label": "Book Lost Fine"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "damage_fine",
+   "fieldtype": "Currency",
+   "label": "Damage Fine"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-11-11 08:56:13.741711",
+ "modified": "2021-11-12 19:20:32.319554",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Crea Mind Settings",
