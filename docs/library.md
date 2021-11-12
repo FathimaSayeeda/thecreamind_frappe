@@ -14,6 +14,8 @@ List of all memberships made against a Kid. Each membership has a `from_date` an
 Book transactions at the Library
 - `Activity Transaction`  
 Activity Transactions at the Activity Center
+- `Caution Deposit Entry`  
+All Caution deposit entries will come up here
 - `Book Delivery Request`  
 Made over a phone call or from the website through member's Cart
 - `Crea Mind Settings`  

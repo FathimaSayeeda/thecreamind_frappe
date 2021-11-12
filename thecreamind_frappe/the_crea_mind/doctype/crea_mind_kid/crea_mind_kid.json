@@ -12,6 +12,7 @@
   "gender",
   "hobbies",
   "column_break_8",
+  "caution_deposit_balance",
   "class",
   "school_name",
   "permanent_address",
@@ -146,11 +147,18 @@
    "fieldname": "father_email_id",
    "fieldtype": "Data",
    "label": "Father Email ID"
+  },
+  {
+   "default": "0",
+   "fieldname": "caution_deposit_balance",
+   "fieldtype": "Currency",
+   "label": "Caution Deposit Balance",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-11 08:07:44.363388",
+ "modified": "2021-11-12 19:28:01.523433",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Crea Mind Kid",
