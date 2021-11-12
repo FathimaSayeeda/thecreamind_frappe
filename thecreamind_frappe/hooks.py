@@ -11,6 +11,8 @@ app_color = "grey"
 app_email = "faztp12@gmail.com"
 app_license = "MIT"
 
+after_migrate = "thecreamind_frappe.setup.after_migrate"
+
 fixtures = [
     {
         "dt": "Role",

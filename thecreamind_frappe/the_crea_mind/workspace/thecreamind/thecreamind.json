@@ -7,7 +7,6 @@
  "disable_user_customization": 1,
  "docstatus": 0,
  "doctype": "Workspace",
- "extends": "Build",
  "extends_another_page": 0,
  "for_user": "",
  "hide_custom": 0,
@@ -168,7 +167,7 @@
    "type": "Link"
   }
  ],
- "modified": "2021-11-11 09:01:52.444261",
+ "modified": "2021-11-12 05:01:52.444261",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "TheCreaMind",
