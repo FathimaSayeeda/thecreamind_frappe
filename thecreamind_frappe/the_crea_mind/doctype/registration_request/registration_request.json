@@ -14,6 +14,8 @@
   "hobbies",
   "no_of_books_at_a_time",
   "column_break_8",
+  "status",
+  "kid",
   "class",
   "school_name",
   "permanent_address",
@@ -94,7 +96,7 @@
    "default": "0",
    "fieldname": "delivery_address_same_as_permanent_address",
    "fieldtype": "Check",
-   "label": "Delivery Address Same as Permanent Address",
+   "label": "Delivery Address same as Permanent Address",
    "read_only": 1
   },
   {
@@ -176,11 +178,27 @@
    "fieldname": "no_of_books_at_a_time",
    "fieldtype": "Int",
    "label": "No of Books at a Time"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nApproved\nDeclined",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kid",
+   "fieldtype": "Link",
+   "label": "Kid",
+   "options": "Crea Mind Kid",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-11 00:08:48.448649",
+ "modified": "2021-11-12 19:50:42.930332",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Registration Request",

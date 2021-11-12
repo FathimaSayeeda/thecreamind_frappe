@@ -29,7 +29,7 @@
   {
    "default": "50",
    "fieldname": "hourly_rate",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Hourly Rate"
   },
   {
@@ -90,7 +90,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-11-12 19:20:32.319554",
+ "modified": "2021-11-12 21:59:22.560471",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Crea Mind Settings",
@@ -105,6 +105,10 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
   }
  ],
  "sort_field": "modified",

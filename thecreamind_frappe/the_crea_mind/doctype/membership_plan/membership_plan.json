@@ -12,6 +12,7 @@
   "has_activity_access",
   "column_break_4",
   "amount",
+  "plan_duration",
   "section_break_6",
   "free_book_frequency",
   "free_book_no",
@@ -88,11 +89,18 @@
    "fieldtype": "Int",
    "label": "No of Hours",
    "mandatory_depends_on": "has_activity_access"
+  },
+  {
+   "default": "30",
+   "description": "In Days",
+   "fieldname": "plan_duration",
+   "fieldtype": "Int",
+   "label": "Plan Duration"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-11 08:04:25.946133",
+ "modified": "2021-11-12 21:32:25.736081",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Membership Plan",
