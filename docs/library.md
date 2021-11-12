@@ -1,15 +1,15 @@
 # Library and Activities Center
-This document servers as the rule book of the app. It contains the general information about the app, and the management flow for the libraries and the activities.
+This document serves as the rule book for the app. It contains general information about the app, and the management flow for the library and the activities.
 
 ## Doctypes
 - `Registration Request`  
-When anybody makes an entry in https://thecreamind.com/registration-form, a new Registration Request is created.
+When somebody makes an entry in https://thecreamind.com/registration-form, a new Registration Request is created.
 - `Membership Plan`  
-List of all available plans in CreaMind. Some plans `has_activity_access` & `has_library_access`.
+List of all available plans in The CreaMind. Some plans `has_activity_access` & `has_library_access`.
 - `Crea Mind Kid`  
-List of all kids registered in CreaMind. Memberships are made against a Kid
+List of all kids registered in The CreaMind. Memberships are made against a Kid.
 - `Kid Membership`
-List of all memberships made against a Kid. Each membership has a `from_date` and `to_date`. On renewal, a new `Kid Membership` Entry will made
+List of all memberships made against a Kid. Each membership has a `from_date` and `to_date`. On renewal, a new `Kid Membership` Entry will be made.
 - `Library Transaction`  
 Book transactions at the Library
 - `Activity Transaction`  
@@ -29,14 +29,19 @@ All possible interactions with the system is listed below.
 ## Registrations & Membership
 - Registering a new Kid who is not physically present at the Library  
 The kids' parent will be asked to goto the `registration-form` on the website and fill in the details. Once done, a new entry in `Registration Request` will be created. The Admin will then make a call to the provided mobile number when free to further carry out the membership process. They will decide on a `Membership Plan` and the parent will be asked for CautionDeposit and MembershipFee and once the payment is done, the admin will click `Create Membership` on the `Registration Request` page. A dialog will open up asking for the `Membership Plan` decided, MembershipFee collected and CautionDeposit collected. Once successful, this will create a `Crea Mind Kid` entry and a `Kid Membership` entry.
+
 - Registering a new Kid who is physically present at the Library  
 A Tablet will be provided to the accompanying guardian showing the same `registration-form` which will create `Registration Request` entry. The Admin will discuss the plans and will continue same as above to make `Crea Mind Kid` & `Kid Membership` entry.
+
 - Renewal of a Kid's Membership  
-The Admin will know when a Kid's membership is about to expire from the report `Expiring Kid Memberships`. The renewal could be done over a Call or when the Parent comes next time to the Library. The Admin will goto the respective `Crea Mind Kid` and click on `Renew Membership` a warning will be shown to if there exists an Active Membership. The plan to renew, with their dates and membership-fee will be discussed and reported in the system to complete renewal. This will make another `Kid Membership` entry.
+The Admin will know when a Kid's membership is about to expire from the report `Expiring Kid Memberships`. The renewal could be done over a Call or when the Parent comes next time to the Library. The Admin will goto the respective `Crea Mind Kid` and click on `Renew Membership`. A warning will be shown if there exists an Active Membership. The plan to renew, with their dates and membership-fee will be discussed and reported in the system to complete renewal. This will make another `Kid Membership` entry.
+
 - When a Kid who has no Membership wants to get in for Activities and Library without having a commitment  
 A simple `Activity Transaction` will be made to accommodate the Kid on an hourly basis
+
 - Renewing a Membership after a long time (more than a year)  
 `TODO`
+
 - Closing a Membership & Refunding Caution Deposit  
 `TODO`
 
