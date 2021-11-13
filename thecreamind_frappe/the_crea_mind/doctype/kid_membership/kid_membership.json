@@ -129,7 +129,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-11 08:14:01.096431",
+ "modified": "2021-11-13 07:20:12.934042",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Kid Membership",
@@ -146,6 +146,21 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind Manager",
+   "share": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "The Crea Mind User"
   }
  ],
  "sort_field": "modified",

@@ -158,7 +158,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-12 19:28:01.523433",
+ "modified": "2021-11-13 07:21:19.855335",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Crea Mind Kid",
@@ -177,8 +177,6 @@
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
