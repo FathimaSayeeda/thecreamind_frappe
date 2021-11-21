@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:KID-{#####}",
+ "autoname": "KID-.#####",
  "creation": "2021-11-11 07:47:38.606832",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -158,7 +158,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-13 07:21:19.855335",
+ "modified": "2021-11-21 22:22:00.894801",
  "modified_by": "Administrator",
  "module": "The Crea Mind",
  "name": "Crea Mind Kid",
